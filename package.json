@@ -4,7 +4,8 @@
   "description": "",
   "main": "app.ts",
   "scripts": {
-    "dev": "nodemon app.ts"
+    "dev": "nodemon app.ts",
+    "build": "tsc --build"
   },
   "keywords": [],
   "author": "icon_edU",
