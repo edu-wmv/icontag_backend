@@ -50,5 +50,8 @@ app.use((req, res, next) => {
 // app.post("/insertData", insertData)
 // app.post("/setPoint", setPoint)
 app.get("/test", data)
+app.get("/test2", (req, res) => {
+    res.status(200).json({ message: "Test 2" })
+});
 
 app.listen(port, () => { console.log(`⚡️[server]: Server is running on port ${port}`) })
