@@ -165,7 +165,7 @@
 // }
 
 const data = (req, res) => {
-  res.status(200).json({ message: 'Hello World' })
+  res.send('test')
 }
 
 export { data }
