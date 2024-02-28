@@ -3,7 +3,7 @@ import { data } from './query'
 const express = require("express")
 
 const app = express()
-const port = 9040
+const port = 3000
 
 // app.use(express.static('public'))
 app.use((req, res, next) => {
