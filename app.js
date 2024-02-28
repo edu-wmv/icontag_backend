@@ -15,18 +15,18 @@ app.use((req, res, next) => {
     next()
 })
 
-app.use((req, res, next) => {
-    const authHeader = req.headers.authorization;
+// app.use((req, res, next) => {
+//     const authHeader = req.headers.authorization;
 
-    if (!authHeader) {
-        return res.status(403).json({ error: 'No token provided' });
-    }
-    else if (authHeader !== process.env.TOKEN) {
-        return res.status(401).json({ error: 'Not authorized' });
-    } else {
-        next();
-    }
-})
+//     if (!authHeader) {
+//         return res.status(403).json({ error: 'No token provided' });
+//     }
+//     else if (authHeader !== process.env.TOKEN) {
+//         return res.status(401).json({ error: 'Not authorized' });
+//     } else {
+//         next();
+//     }
+// })
 
 // app.post("/insertData", insertData)
 // app.post("/setPoint", setPoint)
