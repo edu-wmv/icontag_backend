@@ -1,14 +1,11 @@
 import { data } from './query'
 
 const express = require("express")
-const mysql = require('mysql')
-const logger = require('morgan')
 
 const app = express()
 const port = process.env.SERVER_PORT
 
-app.use(logger('dev'))
-app.use(express.static('public'))
+// app.use(express.static('public'))
 app.use((req, res, next) => {
     res.header("Access-Control-Allow-Origin", "*")
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Authorization")
@@ -30,6 +27,7 @@ app.use((req, res, next) => {
 
 // app.post("/insertData", insertData)
 // app.post("/setPoint", setPoint)
+app.get("/", (req, res) => res.send('Hello World'))
 app.get("/test", data)
 app.get("/test2", (req, res) => res.send('test2'))
 
